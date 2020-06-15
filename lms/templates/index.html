@@ -27,13 +27,13 @@ from openedx.core.djangolib.markup import HTML, Text
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block" src="${static.url('images/banner1.png')}" alt="First slide">
+          <img class="d-block  w-100" src="${static.url('images/banner1.png')}" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block" src="${static.url('images/banner2.png')}" alt="Second slide">
+          <img class="d-block  w-100" src="${static.url('images/banner2.png')}" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block" src="${static.url('images/banner3.png')}" alt="Third slide">
+          <img class="d-block  w-100" src="${static.url('images/banner3.png')}" alt="Third slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
@@ -120,67 +120,50 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="container">
           <div class="row">
               <div class="col-xs-12 col-sm-8 wow fadeInDown">
-                 <div class="tab-wrap">
-                      <div class="media">
-                          <h2>Our Vision</h2>
-                          <div class="parrent pull-left">
-                              <ul class="nav nav-tabs nav-stacked">
-                                  <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01">Child Centric</a></li>
-                                  <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02">Better Education</a></li>
-                                  <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">Serve the Community</a></li>
-                                  <li class=""><a href="#tab4" data-toggle="tab" class="tehnical">Solving Real Educational Problems</a></li>
-                              </ul>
-                          </div>
+                <div class="tab">
+                  <button class="tablinks" onmouseover="openTab(event, 'ChildCenteric')">Child Centric</button>
+                  <button class="tablinks" onmouseover="openTab(event, 'BetterEducation')">Better Education</button>
+                  <button class="tablinks" onmouseover="openTab(event, 'Community')">Serve the Community</button>
+                  <button class="tablinks" onmouseover="openTab(event, 'Real')">Solving Real Educational Problems</button>
+                </div>
 
-                          <div class="parrent media-body">
-                              <div class="tab-content">
-                                  <div class="tab-pane fade" id="tab1">
-                                      <div class="media">
-                                         <div class="pull-left">
-                                              <img class="img-responsive" src="${static.url('images/vision_tab1.png')}">
-                                          </div>
-                                          <div class="media-body">
-                                               <p>To be the most child-centric online education platform where they can enjoy the learning experience and build up a strong knowledge for their future success.</p>
-                                          </div>
-                                      </div>
-                                  </div>
+                <div id="ChildCenteric" class="tabcontent">
 
-                                   <div class="tab-pane fade active in" id="tab2">
-                                      <div class="media">
-                                         <div class="pull-left">
-                                              <img class="img-responsive" src="${static.url('images/vision_tab2.png')}">
-                                          </div>
-                                          <div class="media-body">
-                                               <p>Every child deserves a better education. And we are here to provide access to a better education in one click.</p>
-                                          </div>
-                                      </div>
-                                   </div>
+                  <div class="media">
+                     <div class="pull-left">
+                          <img class="img-responsive" style='height:250px; width:250px' src="${static.url('images/vision_tab1.png')}">
+                      </div>
+                      <div class="media-body">
+                           <p>To be the most child-centric online education platform where they can enjoy the learning experience and build up a strong knowledge for their future success.</p>
+                      </div>
+                  </div>
+                </div>
 
-                                   <div class="tab-pane fade" id="tab3">
-                                      <div class="media">
-                                         <div class="pull-left">
-                                              <img class="img-responsive" src="${static.url('images/vision_tab3.png')}">
-                                          </div>
-                                          <div class="media-body">
-                                               <p>It's our responsibilities to serve the our community (families and schools) with better education tools.</p>
-                                          </div>
-                                      </div>
-                                   </div>
-                                  <div class="tab-pane fade" id="tab4">
-                                     <div class="media">
-                                        <div class="pull-left">
-                                             <img class="img-responsive" src="${static.url('images/vision_tab4.png')}">
-                                         </div>
-                                         <div class="media-body">
-                                              <p>We are passionate about developing cutting-edge products and solutions that no one else would dream to come up with.</p>
-                                         </div>
-                                     </div>
-                                  </div>
+                <div id="BetterEducation" class="tabcontent">
+                  <div class="pull-left">
+                       <img class="img-responsive" style='height:250px; width:250px' src="${static.url('images/vision_tab2.png')}">
+                   </div>
+                   <div class="media-body">
+                        <p>Every child deserves a better education. And we are here to provide access to a better education in one click.</p>
+                   </div>
+                </div>
 
-                              </div> <!--/.tab-content-->
-                          </div> <!--/.media-body-->
-                      </div> <!--/.media-->
-                  </div><!--/.tab-wrap-->
+                <div id="Community" class="tabcontent">
+                  <div class="pull-left">
+                       <img class="img-responsive" style='height:250px; width:250px' src="${static.url('images/vision_tab3.png')}">
+                   </div>
+                   <div class="media-body">
+                        <p>It's our responsibilities to serve the our community (families and schools) with better education tools.</p>
+                   </div>
+                </div>
+                <div id="Real" class="tabcontent">
+                  <div class="pull-left">
+                       <img class="img-responsive" style='height:250px; width:250px' src="${static.url('images/vision_tab4.png')}">
+                   </div>
+                   <div class="media-body">
+                        <p>We are passionate about developing cutting-edge products and solutions that no one else would dream to come up with.</p>
+                   </div>
+                </div>
               </div><!--/.col-sm-6-->
 
               <div class="col-xs-12 col-sm-4 wow fadeInDown">
